@@ -1,6 +1,6 @@
 
-     :local net 10.100.1.0/24;
-     :local iparray;
+     :local net 10.100.1.0/24; # Будет добавлять очереди из этого диапозона. 
+     :local iparray; # Массив уже существующих очередей
      /queue simple 
      :foreach i in=[find] do={
       :local ipstr [:tostr [get $i target]]; 
